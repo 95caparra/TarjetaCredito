@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "e76c6960-c6d6-446c-a51f-1ecc711023cd",
+		"name": "TarjetaCredito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "token",
+			"item": [
+				{
+					"name": "http://localhost:8080/oauth/token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "angularapp",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/oauth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "upload",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/clientes/upload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFuZHJlcyIsInVzZXJfbmFtZSI6ImFuZHJlcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6Ikd1em1hbiIsImV4cCI6MTYwNzQ2ODEwNywibm9tYnJlIjoiQW5kcmVzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImI5ODljYmNkLTlhMjYtNDVlYi1hMmU1LTA3NzY5ZjI3ZGI4OSIsImVtYWlsIjoicHJvZmVzb3JAYm9sc2FkZWlkZWFzLmNvbSIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.GV04KBASzQ8WxJlNp4GJ9LheVXjtF2UbXszEfSt1AMGL7ea_Q_joDAl3Yol8496G958zMuzmWV9nOHKfqm5xr-Kb1ikE2OvnCFCPMXXChisizOrywm-wIRWlgc2Ezx4nkAxyv-O5EltkmD5BCbbwopAaE1QFj8DwF53iz6oTE3NinjxmeijhUzQVs1DFaYLbQBpJluqK_6Uz0pOeBM5al3LJ-Wp_spFHj77zioL9CyLgzIYZp9I8Ug5a_pkFpTX2kpgGxrS-1nVgtUVGAe8bdshuxmiUSYS0U3vv9eTOnOq6j-D-qB34__cOBKLaYlT7xnPf4kvtttMZ_Bfz6cV2OQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "archivo",
+									"type": "file",
+									"src": "/C:/Users/camilo/Pictures/homero.jpg"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "http://localhost:8080/api/clientes/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFuZHJlcyIsInVzZXJfbmFtZSI6ImFuZHJlcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6Ikd1em1hbiIsImV4cCI6MTYwNzQ2NjEyMSwibm9tYnJlIjoiQW5kcmVzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImIyMmYwYjQwLTEzZDAtNGM1YS04OWVjLWQwNTVhNWQ5ZmQ1MCIsImVtYWlsIjoicHJvZmVzb3JAYm9sc2FkZWlkZWFzLmNvbSIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.CVQevnT5sUEsXWuHPmXZuMA6yFML6kJfaIV5lVvxQLjqUoymmMMlzVxUtaT9WzSVZmjhkn67Rv636vXgt5Hy1zHBE-y19Dj-RAeFOMVJIRArLwuKMRotRsN7hpaNnkO9vWqg8RuhOHi05Mgp_BchElQPJ_0ph-33qHjyYPbkshlnYg7wHPT1bWV5W7FjKzt8Z1IQDMbyBjZVvmd4rPYnV07n6X0CniAsvFJVXe6At9FZi24uoPndM6ZSoEYF45-ybThEcips87Ed0h53T5deQU_hZoafOR-NyGZqvEDDJ1kw7tYgsspobcFdp2x0LX9n1MMZVv-aXtI2ynGKrWydog",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/clientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFuZHJlcyIsInVzZXJfbmFtZSI6ImFuZHJlcyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6Ikd1em1hbiIsImV4cCI6MTYwNzQ2ODEwNywibm9tYnJlIjoiQW5kcmVzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImI5ODljYmNkLTlhMjYtNDVlYi1hMmU1LTA3NzY5ZjI3ZGI4OSIsImVtYWlsIjoicHJvZmVzb3JAYm9sc2FkZWlkZWFzLmNvbSIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.GV04KBASzQ8WxJlNp4GJ9LheVXjtF2UbXszEfSt1AMGL7ea_Q_joDAl3Yol8496G958zMuzmWV9nOHKfqm5xr-Kb1ikE2OvnCFCPMXXChisizOrywm-wIRWlgc2Ezx4nkAxyv-O5EltkmD5BCbbwopAaE1QFj8DwF53iz6oTE3NinjxmeijhUzQVs1DFaYLbQBpJluqK_6Uz0pOeBM5al3LJ-Wp_spFHj77zioL9CyLgzIYZp9I8Ug5a_pkFpTX2kpgGxrS-1nVgtUVGAe8bdshuxmiUSYS0U3vv9eTOnOq6j-D-qB34__cOBKLaYlT7xnPf4kvtttMZ_Bfz6cV2OQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/clientes/8",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFkbWluIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJEb2UiLCJleHAiOjE2MDc0NzIxODMsIm5vbWJyZSI6IkpvaG4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjRiYjIxZDVkLWJiNmYtNGJmYy04NTNlLTk0ZTlhMTdkNDhmZCIsImVtYWlsIjoiamhvbi5kb2VAYm9sc2FkZWlkZWFzLmNvbSIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.CJSmrAtDgxBodgNthMq5H-5F4xYu6kA_9Wyyr_WbZeHwn00v29aFWPSVYEZf0ikKkAPdbNIwzNGtuKVMhlYBIDdN4qkFaQFCqDAtCbthDXTo5Ja5XtMTdOjOW2AO0DTuhnsdeLb4hconUj3SL-wjDxMlMnnz0iC1HOhSTDWBQp-JalFUK-bcdZy8tgSEDY9wLVK4_AaoL2JULJ-CXhJm7lAcAFaj41kZ5i3vgyEQv81Apa-SZJfYKcfgofAr8Id1lBnZE6rAgldzEOqscyyATD3ogwj6y8XCZPprQfRNPdlTRjWc3twZ4KeMKkaRMTm1m9i6mu6HSY0LXk7Np9a7RQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Camilo\",\r\n    \"apellido\": \"Ochoa\",\r\n    \"email\": \"95camilo.ochoa@gmail.com\",\r\n    \"createAt\": \"2020-12-09\",\r\n    \"foto\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/clientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFkbWluIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJEb2UiLCJleHAiOjE2MDc0NzMxNjUsIm5vbWJyZSI6IkpvaG4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjUyZTVkZjAxLTAwOTEtNGU3Ni1hNzZmLTYyYTE1M2VjYTY0MyIsImVtYWlsIjoiamhvbi5kb2VAYm9sc2FkZWlkZWFzLmNvbSIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.lpMVlfq7Tbu5IBMsZea4u7ZRKybYzzAPV8i56jC4Ehu3YlU3WZXVztFlcIKjGIbwvVmKaVsP0nJzdRjosLlQH9OPi3Ak3k_RLF5FeydoDl9YJNt5Nh_ZuhuTK_2Tz666qqyg77ALdpB4r00HSKmya4QEbQKFoOH41UrC9gkHiA_Wu8kR92ttzHNfQLNiggByoF5zxrEwgcRkAqTdipHbQP5bQvqWmCX26_YQF5rsGWOSK4Y1c6mi2vcqFoKQl86dbJSUImIkwwzIUsKyfLx7G53t5LVRxvozAkAKkvaeRg6vWyJdjRr-n_ypx43DCYAPAgqCo4qsRlHq-9S4vrm_aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Camilo Andres\",\r\n    \"apellido\": \"Ochoa Parra\",\r\n    \"email\": \"camilo_ocho@hotmail.com\",\r\n    \"createAt\": \"2020-12-08\",\r\n    \"foto\": null,\r\n    \"tarjeta\": {\r\n        \"id\": 8\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/clientes/17",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvX2FkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFkbWluIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJEb2UiLCJleHAiOjE2MDc0NzM2OTMsIm5vbWJyZSI6IkpvaG4iLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6ImZlYjk3YTA2LWVjMGEtNGY1ZS1iYmUyLTgzYjE5NWZhNjQ1OCIsImVtYWlsIjoiamhvbi5kb2VAYm9sc2FkZWlkZWFzLmNvbSIsImNsaWVudF9pZCI6ImFuZ3VsYXJhcHAifQ.IpWv5gJPRgbW-2YbrkhFvdv7iajPq4mDe0XhoxzIHUymQk5rQ9rKQdcEb7f55fHWCgddeYeYHVOIcpZjJB7eh3cR00NzuJvkgiRqZ1M-P5oNn8rVj07rKMUsflvqVDa3p5VPXTKj7BooLHYHGrDfULxR8NfBYivQzj4ZaYm3YEetO57papnp2YiO0RBhMKxBoOK5Iet2EO9b__yNOgD_sZes710jiJlnoOlRoS74JUoHgQAg8NN6W00xEOYUcdakyu2vWZ7DLqwnRoOUVE-WFPG1VzbtUa4KrdYbE_1xAyir0sCO1I5giHWWvTdyDPqVhE84e2nkRAj8a4yZOu9Few",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"17"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
